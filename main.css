@@ -1,0 +1,68 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    background-color: #f5f5dc;
+    text-align: center;
+}
+
+header {
+    padding: 16px 0;
+    color: #000000;
+    font-weight: bold;
+    font-size: 22px;
+    text-transform: uppercase;
+    margin-top: 100px;
+}
+
+.container {
+    margin: 0 auto;
+}
+
+button, input {    
+    padding: 8px;
+}
+
+button:hover {
+    background-color: red;
+}
+
+form input {
+    background-color: #fff;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+form button {
+    background-color: rgb(247, 75, 75);
+    font-size: 18px;
+}
+
+ul {
+    font-size: 38px;
+    margin-top: 30px;
+    padding: 8px;
+    text-align: center;
+}
+
+li {
+    cursor: pointer;
+}
+
+.riscado { 
+    text-decoration: line-through rgb(255, 0, 0);
+    color: gray;
+}
+
+.remover {
+    margin-left: 10px;
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 4px 8px;
+    cursor: pointer;
+    border-radius: 4px;
+    font-weight: bold;
+    font-size: 24px;
+}
