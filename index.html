@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./main.css">
+    <style>
+
+        body {
+            background-color: #f5e9f3;
+        }
+
+        h2 {
+            width: 100%;
+            margin-left: 130px;
+        }
+
+        .container {
+            max-width: 600px;
+            margin-top: 80px;
+            background-color: rgb(251, 215, 255);
+            border-radius: 8px;
+        }
+
+        button {
+            width: 100%;     
+            margin-bottom: 30px;       
+        }
+
+        input,
+        .form-check {
+            margin-bottom: 20px;
+        }
+
+        label {
+            font-weight: bold;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2 class="h1">Cadastro de conta</h2>
+        <form>
+            <label class="form-label" for="nome">Nome completo:</label>
+            <input class="form-control" type="text" id="nome">
+            <label for="email" class="form-label">E-mail:</label>
+            <input type="email" class="form-control">
+            <label for="tel" class="form-label">Telefone:</label>
+            <input type="tel" id="tel" class="form-control">
+            <div class="form-check">
+                <label for="termos" class="form-label">Li e concordo com os termos</label>
+                <input type="checkbox" id="termos" class="form-check-input">
+            </div>
+            <button class="btn btn-primary">Cadastrar</button>
+        </form>
+    </div>
+</body>
+</html>
