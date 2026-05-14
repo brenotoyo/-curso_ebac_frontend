@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', function(){
+document.addEventListener('DOMContentLoaded', async function(){
     const nameElement = document.querySelector('#name');
     const usernameElement = document.querySelector('#username');
     const avatarElement = document.querySelector('#avatar');
@@ -9,11 +9,15 @@ document.addEventListener('DOMContentLoaded', function(){
 
     const endpoint = `https://api.github.com/users/brenotoyo`;
 
-    fetch(endpoint)
-    .then(function(res){
-        return res.json();
-    })
-    .then(function(json){
+    try {
+        const res = await fetch(endpoint);
+
+        if (!res.ok) {
+            throw new Error(`Erro na requisição: ${res.status} ${res.statusText}`);
+        }
+
+        const json = await res.json();
+
         nameElement.innerText = json.name;
         avatarElement.src = json.avatar_url;
         usernameElement.innerText = `@${json.login}`;
@@ -21,5 +25,10 @@ document.addEventListener('DOMContentLoaded', function(){
         followersElement.innerText = json.followers;
         followingElement.innerText = json.following;
         linkElement.href = json.html_url;
-    })
+
+    } catch (error) {
+        console.error('Falha ao buscar dados do GitHub:', error.message);
+        // Opcional: mostrar mensagem de erro na UI
+        nameElement.innerText = 'Usuário não encontrado';
+    }
 })
